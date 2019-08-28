@@ -1,0 +1,1401 @@
+2019-08-28 12:58:54,726 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 15402 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 12:58:54,729 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 12:58:54,730 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 12:58:56,211 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-08-28 12:58:56,212 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-08-28 12:58:56,216 INFO org.apache.catalina.core.AprLifecycleListener [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-08-28 12:58:56,274 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-08-28 12:58:56,480 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 12:58:57,615 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'openmrs-user'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:72)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:166)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7189a55.CGLIB$jpaVendorAdapter$5(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7189a55$$FastClassBySpringCGLIB$$e9e4a9f7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$7189a55.jpaVendorAdapter(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2019-08-28 12:58:57,668 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 12:58:57,781 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 12:58:57,782 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 12:58:57,808 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 12:58:57,870 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 12:58:58,874 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'openmrs-user'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:88)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:259)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:233)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:51)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:242)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:210)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.handleTypes(MetadataBuildingProcess.java:352)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:111)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:861)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:888)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2019-08-28 12:58:58,875 WARN org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH000342: Could not obtain connection to query metadata : Access denied for user 'openmrs-user'@'localhost' (using password: YES)
+2019-08-28 12:58:58,881 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 12:58:58,893 INFO org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl [restartedMain] HHH000422: Disabling contextual LOB creation as connection was null
+2019-08-28 12:58:59,203 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 12:59:00,207 ERROR com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Exception during pool initialization.
+java.sql.SQLException: Access denied for user 'openmrs-user'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:312)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2019-08-28 12:59:00,207 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] SQL Error: 1045, SQLState: 28000
+2019-08-28 12:59:00,208 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Access denied for user 'openmrs-user'@'localhost' (using password: YES)
+2019-08-28 12:59:00,213 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2019-08-28 12:59:00,232 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1699)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1089)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:859)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1758)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1695)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:47)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:312)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:462)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:892)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 25 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'openmrs-user'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 40 common frames omitted
+2019-08-28 12:59:38,257 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 15570 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 12:59:38,259 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 12:59:38,260 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 12:59:39,653 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-08-28 12:59:39,653 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-08-28 12:59:39,657 INFO org.apache.catalina.core.AprLifecycleListener [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-08-28 12:59:39,716 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-08-28 12:59:39,907 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 12:59:40,054 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 12:59:40,098 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 12:59:40,214 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 12:59:40,216 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 12:59:40,249 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 12:59:40,322 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 12:59:40,764 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-08-28 12:59:40,766 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-08-28 12:59:40,769 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2019-08-28 12:59:40,789 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledTasks' defined in file [/home/sushant/nesc/Patient_State_Schedular/target/classes/org/openmrs/module/Patient_State_Schedular/util/ScheduledTasks.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'scheduleTaskWithCronExpression': Cron expression must consist of 6 fields (found 1 in "$scheduler.cron.format")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'scheduleTaskWithCronExpression': Cron expression must consist of 6 fields (found 1 in "$scheduler.cron.format")
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:476)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:339)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:339)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 20 common frames omitted
+2019-08-28 13:03:20,329 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 15920 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:03:20,330 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:03:20,332 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:03:21,800 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-08-28 13:03:21,800 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-08-28 13:03:21,804 INFO org.apache.catalina.core.AprLifecycleListener [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-08-28 13:03:21,867 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-08-28 13:03:22,075 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 13:03:22,226 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 13:03:22,334 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:03:22,382 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 13:03:22,383 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 13:03:22,406 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 13:03:22,487 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:03:22,888 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-08-28 13:03:22,890 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-08-28 13:03:22,893 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2019-08-28 13:03:22,914 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scheduledTasks' defined in file [/home/sushant/nesc/Patient_State_Schedular/target/classes/org/openmrs/module/Patient_State_Schedular/util/ScheduledTasks.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: Encountered invalid @Scheduled method 'scheduleTaskWithCronExpression': Cron expression must consist of 6 fields (found 1 in "$scheduler.cron.format")
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:581)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Encountered invalid @Scheduled method 'scheduleTaskWithCronExpression': Cron expression must consist of 6 fields (found 1 in "$scheduler.cron.format")
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.processScheduled(ScheduledAnnotationBeanPostProcessor.java:476)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$null$1(ScheduledAnnotationBeanPostProcessor.java:339)
+	at java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.lambda$postProcessAfterInitialization$2(ScheduledAnnotationBeanPostProcessor.java:339)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.postProcessAfterInitialization(ScheduledAnnotationBeanPostProcessor.java:338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1703)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	... 20 common frames omitted
+2019-08-28 13:04:00,005 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16067 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:04:00,007 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:04:00,008 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:04:01,289 INFO org.apache.catalina.core.StandardService [restartedMain] Starting service [Tomcat]
+2019-08-28 13:04:01,290 INFO org.apache.catalina.core.StandardEngine [restartedMain] Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-08-28 13:04:01,294 INFO org.apache.catalina.core.AprLifecycleListener [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-08-28 13:04:01,364 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2019-08-28 13:04:01,542 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 13:04:01,691 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 13:04:01,733 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:04:01,858 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 13:04:01,859 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 13:04:01,886 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 13:04:01,962 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:04:03,134 ERROR org.apache.catalina.core.StandardService [restartedMain] Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:780)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:333)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1277)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1265)
+	at org.openmrs.module.Patient_State_Schedular.Application.main(Application.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 18 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:219)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1151)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 19 common frames omitted
+2019-08-28 13:04:03,137 INFO org.apache.catalina.core.StandardService [restartedMain] Stopping service [Tomcat]
+2019-08-28 13:04:03,148 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-08-28 13:04:03,153 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2019-08-28 13:04:03,155 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2019-08-28 13:06:33,299 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16360 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:06:33,300 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:06:33,301 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:06:34,159 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 13:06:34,301 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 13:06:34,345 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:06:34,387 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 13:06:34,388 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 13:06:34,412 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 13:06:34,496 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:06:35,318 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.255 seconds (JVM running for 2.679)
+2019-08-28 13:07:00,045 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:07:00
+2019-08-28 13:08:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:08:00
+2019-08-28 13:09:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:09:00
+2019-08-28 13:09:53,183 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16690 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:09:53,185 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:09:53,185 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:09:53,983 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 13:09:54,192 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 13:09:54,233 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:09:54,270 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 13:09:54,271 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 13:09:54,293 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 13:09:54,361 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:09:55,159 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.206 seconds (JVM running for 2.628)
+2019-08-28 13:10:00,007 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] SQL Error: 1054, SQLState: 42S22
+2019-08-28 13:10:00,007 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] Unknown column 'id' in 'field list'
+2019-08-28 13:10:00,017 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler [pool-1-thread-1] Unexpected error occurred in scheduled task.
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1514)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl.getStartTreatmentDate(PatientStateSchedularServiceImpl.java:25)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$FastClassBySpringCGLIB$$c256b772.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$EnhancerBySpringCGLIB$$c4fb9b0.getStartTreatmentDate(<generated>)
+	at org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks.scheduleTaskWithCronExpression(ScheduledTasks.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204)
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1575)
+	at org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:274)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1504)
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2124)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2058)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5158)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2043)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 29 common frames omitted
+2019-08-28 13:10:00,038 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] SQL Error: 1054, SQLState: 42S22
+2019-08-28 13:10:00,039 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] Unknown column 'id' in 'field list'
+2019-08-28 13:10:00,046 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler [pool-1-thread-1] Unexpected error occurred in scheduled task.
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1514)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl.getStartTreatmentDate(PatientStateSchedularServiceImpl.java:25)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$FastClassBySpringCGLIB$$c256b772.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$EnhancerBySpringCGLIB$$9267180d.getStartTreatmentDate(<generated>)
+	at org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks.scheduleTaskWithCronExpression(ScheduledTasks.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204)
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1575)
+	at org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:274)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1504)
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2124)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2058)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5158)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2043)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 29 common frames omitted
+2019-08-28 13:11:00,002 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] SQL Error: 1054, SQLState: 42S22
+2019-08-28 13:11:00,002 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] SQL Error: 1054, SQLState: 42S22
+2019-08-28 13:11:00,003 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] Unknown column 'id' in 'field list'
+2019-08-28 13:11:00,003 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] Unknown column 'id' in 'field list'
+2019-08-28 13:11:00,005 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler [pool-1-thread-1] Unexpected error occurred in scheduled task.
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1514)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl.getStartTreatmentDate(PatientStateSchedularServiceImpl.java:25)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$FastClassBySpringCGLIB$$c256b772.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$EnhancerBySpringCGLIB$$9267180d.getStartTreatmentDate(<generated>)
+	at org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks.scheduleTaskWithCronExpression(ScheduledTasks.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204)
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1575)
+	at org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:274)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1504)
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2124)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2058)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5158)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2043)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 29 common frames omitted
+2019-08-28 13:11:00,005 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler [pool-1-thread-1] Unexpected error occurred in scheduled task.
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1514)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl.getStartTreatmentDate(PatientStateSchedularServiceImpl.java:25)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$FastClassBySpringCGLIB$$c256b772.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$EnhancerBySpringCGLIB$$c4fb9b0.getStartTreatmentDate(<generated>)
+	at org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks.scheduleTaskWithCronExpression(ScheduledTasks.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178)
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204)
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1575)
+	at org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:274)
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1504)
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'id' in 'field list'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2124)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2058)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5158)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2043)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
+	... 29 common frames omitted
+2019-08-28 13:11:20,524 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2019-08-28 13:11:20,526 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
+2019-08-28 13:11:20,618 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16690 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:11:20,619 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:11:20,619 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:11:20,813 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-08-28 13:11:20,817 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-08-28 13:11:20,818 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown initiated...
+2019-08-28 13:11:20,821 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown completed.
+2019-08-28 13:11:20,823 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:11:20,831 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:11:21,025 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16360 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:11:21,026 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:11:21,027 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:11:21,074 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.475 seconds (JVM running for 88.543)
+2019-08-28 13:11:21,265 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-08-28 13:11:21,270 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-08-28 13:11:21,273 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:11:21,280 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:11:21,433 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.442 seconds (JVM running for 288.794)
+2019-08-28 13:11:47,465 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-2 - Shutdown initiated...
+2019-08-28 13:11:47,468 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-2 - Shutdown completed.
+2019-08-28 13:11:47,629 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16690 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:11:47,629 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:11:47,630 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:11:47,839 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-2 - Shutdown initiated...
+2019-08-28 13:11:47,845 INFO com.zaxxer.hikari.HikariDataSource [Thread-10] HikariPool-2 - Shutdown completed.
+2019-08-28 13:11:47,863 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2019-08-28 13:11:47,867 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2019-08-28 13:11:47,871 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:11:47,878 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:11:48,040 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16360 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:11:48,040 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:11:48,041 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:11:48,058 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.454 seconds (JVM running for 115.527)
+2019-08-28 13:11:48,226 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2019-08-28 13:11:48,229 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2019-08-28 13:11:48,232 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:11:48,236 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:11:48,346 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.329 seconds (JVM running for 315.707)
+2019-08-28 13:12:00,010 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-3-thread-1] Cron Task :: Execution Time - 13:12:00
+2019-08-28 13:12:00,015 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-3-thread-1] Cron Task :: Execution Time - 13:12:00
+2019-08-28 13:12:21,458 INFO com.zaxxer.hikari.HikariDataSource [Thread-13] HikariPool-3 - Shutdown initiated...
+2019-08-28 13:12:21,461 INFO com.zaxxer.hikari.HikariDataSource [Thread-13] HikariPool-3 - Shutdown completed.
+2019-08-28 13:12:21,588 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16690 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:12:21,588 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:12:21,588 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:12:21,748 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2019-08-28 13:12:21,751 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2019-08-28 13:12:21,756 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:12:21,755 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-3 - Shutdown initiated...
+2019-08-28 13:12:21,761 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:12:21,763 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-3 - Shutdown completed.
+2019-08-28 13:12:21,975 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.401 seconds (JVM running for 149.444)
+2019-08-28 13:12:22,011 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16360 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:12:22,011 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:12:22,012 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:12:22,194 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2019-08-28 13:12:22,198 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2019-08-28 13:12:22,201 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:12:22,206 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:12:22,315 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.325 seconds (JVM running for 349.676)
+2019-08-28 13:13:00,007 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-4-thread-1] SQL Error: 1146, SQLState: 42S02
+2019-08-28 13:13:00,008 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-4-thread-1] Table 'openmrs.erpdrug_order' doesn't exist
+2019-08-28 13:13:00,008 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-4-thread-1] SQL Error: 1146, SQLState: 42S02
+2019-08-28 13:13:00,008 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-4-thread-1] Table 'openmrs.erpdrug_order' doesn't exist
+2019-08-28 13:13:00,011 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler [pool-4-thread-1] Unexpected error occurred in scheduled task.
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1514) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl.getStartTreatmentDate(PatientStateSchedularServiceImpl.java:25) ~[classes/:na]
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$FastClassBySpringCGLIB$$c256b772.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$EnhancerBySpringCGLIB$$9267180d.getStartTreatmentDate(<generated>) ~[classes/:na]
+	at org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks.scheduleTaskWithCronExpression(ScheduledTasks.java:26) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_221]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1575) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:274) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1504) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'openmrs.erpdrug_order' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_221]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_221]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2124) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2058) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5158) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2043) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-2.7.9.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-2.7.9.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	... 29 common frames omitted
+2019-08-28 13:13:00,011 ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler [pool-4-thread-1] Unexpected error occurred in scheduled task.
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:149) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:157) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1514) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl.getStartTreatmentDate(PatientStateSchedularServiceImpl.java:25) ~[classes/:na]
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$FastClassBySpringCGLIB$$c256b772.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204) ~[spring-core-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294) ~[spring-tx-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98) ~[spring-tx-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688) ~[spring-aop-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.openmrs.module.Patient_State_Schedular.service.impl.PatientStateSchedularServiceImpl$$EnhancerBySpringCGLIB$$c4fb9b0.getStartTreatmentDate(<generated>) ~[classes/:na]
+	at org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks.scheduleTaskWithCronExpression(ScheduledTasks.java:26) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_221]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_221]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at org.springframework.scheduling.concurrent.ReschedulingRunnable.run(ReschedulingRunnable.java:93) [spring-context-5.0.9.RELEASE.jar:5.0.9.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_221]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_221]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_221]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_221]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_221]
+Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:111) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:97) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:178) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.engine.query.spi.NativeSQLQueryPlan.performExecuteUpdate(NativeSQLQueryPlan.java:204) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.internal.SessionImpl.executeNativeUpdate(SessionImpl.java:1575) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.query.internal.NativeQueryImpl.doExecuteUpdate(NativeQueryImpl.java:274) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	at org.hibernate.query.internal.AbstractProducedQuery.executeUpdate(AbstractProducedQuery.java:1504) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	... 25 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'openmrs.erpdrug_order' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_221]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_221]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_221]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_221]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.Util.getInstance(Util.java:408) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2495) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1903) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2124) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2058) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5158) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2043) ~[mysql-connector-java-5.1.47.jar:5.1.47]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61) ~[HikariCP-2.7.9.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java) ~[HikariCP-2.7.9.jar:na]
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175) ~[hibernate-core-5.2.17.Final.jar:5.2.17.Final]
+	... 29 common frames omitted
+2019-08-28 13:13:15,788 INFO com.zaxxer.hikari.HikariDataSource [Thread-20] HikariPool-4 - Shutdown initiated...
+2019-08-28 13:13:15,800 INFO com.zaxxer.hikari.HikariDataSource [Thread-20] HikariPool-4 - Shutdown completed.
+2019-08-28 13:13:15,957 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16360 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:13:15,957 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:13:15,957 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:13:16,136 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2019-08-28 13:13:16,140 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2019-08-28 13:13:16,144 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:13:16,148 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:13:16,347 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.406 seconds (JVM running for 403.708)
+2019-08-28 13:13:16,358 INFO com.zaxxer.hikari.HikariDataSource [Thread-18] HikariPool-4 - Shutdown initiated...
+2019-08-28 13:13:16,398 INFO com.zaxxer.hikari.HikariDataSource [Thread-18] HikariPool-4 - Shutdown completed.
+2019-08-28 13:13:16,732 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 16690 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:13:16,733 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:13:16,733 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:13:17,032 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
+2019-08-28 13:13:17,054 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
+2019-08-28 13:13:17,059 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:13:17,066 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:13:17,239 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.572 seconds (JVM running for 204.708)
+2019-08-28 13:13:27,375 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 17122 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 13:13:27,376 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 13:13:27,377 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 13:13:28,158 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 13:13:28,347 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 13:13:28,384 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 13:13:28,424 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 13:13:28,425 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 13:13:28,449 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 13:13:28,525 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 13:13:29,305 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.154 seconds (JVM running for 2.6)
+2019-08-28 13:14:00,008 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:14:00
+2019-08-28 13:14:00,010 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:14:00
+2019-08-28 13:14:00,045 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:14:00
+2019-08-28 13:15:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:15:00
+2019-08-28 13:15:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:15:00
+2019-08-28 13:15:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:15:00
+2019-08-28 13:16:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:16:00
+2019-08-28 13:16:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:16:00
+2019-08-28 13:16:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:16:00
+2019-08-28 13:17:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:17:00
+2019-08-28 13:17:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:17:00
+2019-08-28 13:17:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:17:00
+2019-08-28 13:18:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:18:00
+2019-08-28 13:18:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:18:00
+2019-08-28 13:18:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:18:00
+2019-08-28 13:19:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:19:00
+2019-08-28 13:19:00,006 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:19:00
+2019-08-28 13:19:00,011 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:19:00
+2019-08-28 13:20:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:20:00
+2019-08-28 13:20:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:20:00
+2019-08-28 13:20:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 13:20:00
+2019-08-28 13:20:04,023 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-08-28 13:20:04,026 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(9)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2019-08-28 13:21:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:21:00
+2019-08-28 13:21:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:21:00
+2019-08-28 13:22:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:22:00
+2019-08-28 13:22:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:22:00
+2019-08-28 13:23:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:23:00
+2019-08-28 13:23:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:23:00
+2019-08-28 13:24:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:24:00
+2019-08-28 13:24:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:24:00
+2019-08-28 13:25:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:25:00
+2019-08-28 13:25:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:25:00
+2019-08-28 13:26:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:26:00
+2019-08-28 13:26:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:26:00
+2019-08-28 13:27:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:27:00
+2019-08-28 13:27:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:27:00
+2019-08-28 13:28:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:28:00
+2019-08-28 13:28:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:28:00
+2019-08-28 13:29:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:29:00
+2019-08-28 13:29:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:29:00
+2019-08-28 13:30:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:30:00
+2019-08-28 13:30:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:30:00
+2019-08-28 13:31:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:31:00
+2019-08-28 13:31:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:31:00
+2019-08-28 13:32:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:32:00
+2019-08-28 13:32:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:32:00
+2019-08-28 13:32:02,633 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(26)-127.0.0.1] HikariPool-5 - Shutdown initiated...
+2019-08-28 13:32:02,636 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(26)-127.0.0.1] HikariPool-5 - Shutdown completed.
+2019-08-28 13:33:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:33:00
+2019-08-28 13:34:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:34:00
+2019-08-28 13:35:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:35:00
+2019-08-28 13:36:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-5-thread-1] Cron Task :: Execution Time - 13:36:00
+2019-08-28 13:36:02,195 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(33)-127.0.0.1] HikariPool-5 - Shutdown initiated...
+2019-08-28 13:36:02,199 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(33)-127.0.0.1] HikariPool-5 - Shutdown completed.
+2019-08-28 14:38:19,702 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 22970 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 14:38:19,705 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 14:38:19,706 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 14:38:20,569 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 14:38:20,717 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 14:38:20,753 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 14:38:20,792 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 14:38:20,793 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 14:38:20,816 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 14:38:20,889 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 14:38:21,693 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.207 seconds (JVM running for 2.648)
+2019-08-28 14:39:00,049 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:39:00
+2019-08-28 14:40:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:40:00
+2019-08-28 14:41:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:41:00
+2019-08-28 14:42:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:42:00
+2019-08-28 14:42:45,168 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown initiated...
+2019-08-28 14:42:45,170 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown completed.
+2019-08-28 14:42:45,267 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 22970 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 14:42:45,267 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 14:42:45,268 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 14:42:45,492 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-08-28 14:42:45,498 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-08-28 14:42:45,503 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 14:42:45,507 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 14:42:45,659 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.412 seconds (JVM running for 266.614)
+2019-08-28 14:43:00,009 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:43:00
+2019-08-28 14:43:07,214 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(7)-127.0.0.1] HikariPool-2 - Shutdown initiated...
+2019-08-28 14:43:07,217 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(7)-127.0.0.1] HikariPool-2 - Shutdown completed.
+2019-08-28 14:43:21,777 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 23340 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 14:43:21,779 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 14:43:21,779 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 14:43:22,680 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 14:43:22,821 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 14:43:22,859 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 14:43:22,898 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 14:43:22,899 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 14:43:22,920 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 14:43:22,986 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 14:43:23,765 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.217 seconds (JVM running for 2.659)
+2019-08-28 14:43:43,308 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 23400 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 14:43:43,309 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 14:43:43,310 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 14:43:44,183 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 14:43:44,383 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 14:43:44,428 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 14:43:44,467 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 14:43:44,468 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 14:43:44,494 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 14:43:44,565 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 14:43:45,263 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.189 seconds (JVM running for 2.63)
+2019-08-28 14:44:00,046 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:44:00
+2019-08-28 14:44:00,054 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:44:00
+2019-08-28 14:45:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:45:00
+2019-08-28 14:45:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:45:00
+2019-08-28 14:46:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:46:00
+2019-08-28 14:46:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:46:00
+2019-08-28 14:47:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:47:00
+2019-08-28 14:47:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:47:00
+2019-08-28 14:48:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:48:00
+2019-08-28 14:48:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:48:00
+2019-08-28 14:49:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:49:00
+2019-08-28 14:49:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:49:00
+2019-08-28 14:50:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:50:00
+2019-08-28 14:50:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:50:00
+2019-08-28 14:51:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:51:00
+2019-08-28 14:51:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:51:00
+2019-08-28 14:52:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:52:00
+2019-08-28 14:52:00,006 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:52:00
+2019-08-28 14:53:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:53:00
+2019-08-28 14:53:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:53:00
+2019-08-28 14:54:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:54:00
+2019-08-28 14:54:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:54:00
+2019-08-28 14:55:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:55:00
+2019-08-28 14:55:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 14:55:00
+2019-08-28 14:55:17,092 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown initiated...
+2019-08-28 14:55:17,114 INFO com.zaxxer.hikari.HikariDataSource [Thread-2] HikariPool-1 - Shutdown completed.
+2019-08-28 14:55:17,581 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown initiated...
+2019-08-28 14:55:17,594 INFO com.zaxxer.hikari.HikariDataSource [Thread-7] HikariPool-1 - Shutdown completed.
+2019-08-28 14:55:17,623 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 23400 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 14:55:17,624 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 14:55:17,624 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 14:55:18,043 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 23340 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 14:55:18,043 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 14:55:18,044 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 14:55:18,263 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-08-28 14:55:18,269 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-08-28 14:55:18,276 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 14:55:18,283 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 14:55:18,472 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2019-08-28 14:55:18,500 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2019-08-28 14:55:18,508 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 14:55:18,544 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 14:55:18,594 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 1.054 seconds (JVM running for 695.961)
+2019-08-28 14:55:18,924 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 0.964 seconds (JVM running for 717.818)
+2019-08-28 14:56:00,010 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:56:00
+2019-08-28 14:56:00,011 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:56:00
+2019-08-28 14:57:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:57:00
+2019-08-28 14:57:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:57:00
+2019-08-28 14:58:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:58:00
+2019-08-28 14:58:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:58:00
+2019-08-28 14:59:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:59:00
+2019-08-28 14:59:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 14:59:00
+2019-08-28 15:00:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:00:00
+2019-08-28 15:00:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:00:00
+2019-08-28 15:01:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:01:00
+2019-08-28 15:01:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:01:00
+2019-08-28 15:02:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:02:00
+2019-08-28 15:02:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:02:00
+2019-08-28 15:03:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:03:00
+2019-08-28 15:03:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:03:00
+2019-08-28 15:04:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:04:00
+2019-08-28 15:04:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:04:00
+2019-08-28 15:05:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:05:00
+2019-08-28 15:05:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:05:00
+2019-08-28 15:05:20,944 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Starting Application on sushant-HP-ProBook-640-G1 with PID 24262 (/home/sushant/nesc/Patient_State_Schedular/target/classes started by sushant in /home/sushant/nesc/Patient_State_Schedular)
+2019-08-28 15:05:20,945 DEBUG org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Running with Spring Boot v2.0.5.RELEASE, Spring v5.0.9.RELEASE
+2019-08-28 15:05:20,946 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] No active profile set, falling back to default profiles: default
+2019-08-28 15:05:21,773 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2019-08-28 15:05:21,927 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2019-08-28 15:05:21,971 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-28 15:05:22,010 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.2.17.Final}
+2019-08-28 15:05:22,011 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2019-08-28 15:05:22,034 INFO org.hibernate.annotations.common.Version [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2019-08-28 15:05:22,104 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-28 15:05:22,861 INFO org.openmrs.module.Patient_State_Schedular.Application [restartedMain] Started Application in 2.164 seconds (JVM running for 2.578)
+2019-08-28 15:06:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:06:00
+2019-08-28 15:06:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:06:00
+2019-08-28 15:06:00,042 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:06:00
+2019-08-28 15:07:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:07:00
+2019-08-28 15:07:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:07:00
+2019-08-28 15:07:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:07:00
+2019-08-28 15:08:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:08:00
+2019-08-28 15:08:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:08:00
+2019-08-28 15:08:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:08:00
+2019-08-28 15:09:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:09:00
+2019-08-28 15:09:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:09:00
+2019-08-28 15:09:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:09:00
+2019-08-28 15:10:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:10:00
+2019-08-28 15:10:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:10:00
+2019-08-28 15:10:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:10:00
+2019-08-28 15:11:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:11:00
+2019-08-28 15:11:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:11:00
+2019-08-28 15:11:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:11:00
+2019-08-28 15:12:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:12:00
+2019-08-28 15:12:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:12:00
+2019-08-28 15:12:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:12:00
+2019-08-28 15:13:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:13:00
+2019-08-28 15:13:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:13:00
+2019-08-28 15:13:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:13:00
+2019-08-28 15:14:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:14:00
+2019-08-28 15:14:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:14:00
+2019-08-28 15:14:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:14:00
+2019-08-28 15:15:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:15:00
+2019-08-28 15:15:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:15:00
+2019-08-28 15:15:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:15:00
+2019-08-28 15:16:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:16:00
+2019-08-28 15:16:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:16:00
+2019-08-28 15:16:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:16:00
+2019-08-28 15:17:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:17:00
+2019-08-28 15:17:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:17:00
+2019-08-28 15:17:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:17:00
+2019-08-28 15:18:00,006 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:18:00
+2019-08-28 15:18:00,006 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:18:00
+2019-08-28 15:18:00,007 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:18:00
+2019-08-28 15:19:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:19:00
+2019-08-28 15:19:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:19:00
+2019-08-28 15:19:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:19:00
+2019-08-28 15:20:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:20:00
+2019-08-28 15:20:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:20:00
+2019-08-28 15:20:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:20:00
+2019-08-28 15:21:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:21:00
+2019-08-28 15:21:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:21:00
+2019-08-28 15:21:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:21:00
+2019-08-28 15:22:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:22:00
+2019-08-28 15:22:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:22:00
+2019-08-28 15:22:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:22:00
+2019-08-28 15:23:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:23:00
+2019-08-28 15:23:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:23:00
+2019-08-28 15:23:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:23:00
+2019-08-28 15:24:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:24:00
+2019-08-28 15:24:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:24:00
+2019-08-28 15:24:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:24:00
+2019-08-28 15:25:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:25:00
+2019-08-28 15:25:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:25:00
+2019-08-28 15:25:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:25:00
+2019-08-28 15:26:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:26:00
+2019-08-28 15:26:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:26:00
+2019-08-28 15:26:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:26:00
+2019-08-28 15:27:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:27:00
+2019-08-28 15:27:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:27:00
+2019-08-28 15:27:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:27:00
+2019-08-28 15:28:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:28:00
+2019-08-28 15:28:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:28:00
+2019-08-28 15:28:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:28:00
+2019-08-28 15:29:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:29:00
+2019-08-28 15:29:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:29:00
+2019-08-28 15:29:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:29:00
+2019-08-28 15:30:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:30:00
+2019-08-28 15:30:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:30:00
+2019-08-28 15:30:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:30:00
+2019-08-28 15:31:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:31:00
+2019-08-28 15:31:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:31:00
+2019-08-28 15:31:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:31:00
+2019-08-28 15:32:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:32:00
+2019-08-28 15:32:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:32:00
+2019-08-28 15:32:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:32:00
+2019-08-28 15:33:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:33:00
+2019-08-28 15:33:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:33:00
+2019-08-28 15:33:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:33:00
+2019-08-28 15:34:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:34:00
+2019-08-28 15:34:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:34:00
+2019-08-28 15:34:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:34:00
+2019-08-28 15:35:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:35:00
+2019-08-28 15:35:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:35:00
+2019-08-28 15:35:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:35:00
+2019-08-28 15:36:00,006 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:36:00
+2019-08-28 15:36:00,006 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:36:00
+2019-08-28 15:36:00,007 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:36:00
+2019-08-28 15:37:00,002 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:37:00
+2019-08-28 15:37:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:37:00
+2019-08-28 15:37:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:37:00
+2019-08-28 15:38:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:38:00
+2019-08-28 15:38:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:38:00
+2019-08-28 15:38:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:38:00
+2019-08-28 15:39:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:39:00
+2019-08-28 15:39:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:39:00
+2019-08-28 15:39:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:39:00
+2019-08-28 15:40:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:40:00
+2019-08-28 15:40:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:40:00
+2019-08-28 15:40:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:40:00
+2019-08-28 15:41:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:41:00
+2019-08-28 15:41:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:41:00
+2019-08-28 15:41:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:41:00
+2019-08-28 15:42:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:42:00
+2019-08-28 15:42:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:42:00
+2019-08-28 15:42:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:42:00
+2019-08-28 15:43:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:43:00
+2019-08-28 15:43:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:43:00
+2019-08-28 15:43:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:43:00
+2019-08-28 15:44:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:44:00
+2019-08-28 15:44:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:44:00
+2019-08-28 15:44:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:44:00
+2019-08-28 15:45:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:45:00
+2019-08-28 15:45:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:45:00
+2019-08-28 15:45:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:45:00
+2019-08-28 15:46:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:46:00
+2019-08-28 15:46:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:46:00
+2019-08-28 15:46:00,008 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:46:00
+2019-08-28 15:47:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:47:00
+2019-08-28 15:47:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:47:00
+2019-08-28 15:47:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:47:00
+2019-08-28 15:48:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:48:00
+2019-08-28 15:48:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:48:00
+2019-08-28 15:48:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:48:00
+2019-08-28 15:49:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:49:00
+2019-08-28 15:49:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:49:00
+2019-08-28 15:49:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:49:00
+2019-08-28 15:50:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:50:00
+2019-08-28 15:50:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:50:00
+2019-08-28 15:50:00,005 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:50:00
+2019-08-28 15:51:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:51:00
+2019-08-28 15:51:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:51:00
+2019-08-28 15:51:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:51:00
+2019-08-28 15:52:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:52:00
+2019-08-28 15:52:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:52:00
+2019-08-28 15:52:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:52:00
+2019-08-28 15:53:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:53:00
+2019-08-28 15:53:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:53:00
+2019-08-28 15:53:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:53:00
+2019-08-28 15:54:00,003 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:54:00
+2019-08-28 15:54:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:54:00
+2019-08-28 15:54:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:54:00
+2019-08-28 15:55:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-1-thread-1] Cron Task :: Execution Time - 15:55:00
+2019-08-28 15:55:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:55:00
+2019-08-28 15:55:00,004 INFO org.openmrs.module.Patient_State_Schedular.util.ScheduledTasks [pool-2-thread-1] Cron Task :: Execution Time - 15:55:00
+2019-08-28 15:55:23,634 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(74)-127.0.0.1] HikariPool-2 - Shutdown initiated...
+2019-08-28 15:55:23,638 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(74)-127.0.0.1] HikariPool-2 - Shutdown completed.
+2019-08-28 15:55:24,058 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(74)-127.0.0.1] HikariPool-2 - Shutdown initiated...
+2019-08-28 15:55:24,059 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(74)-127.0.0.1] HikariPool-2 - Shutdown completed.
+2019-08-28 15:55:24,474 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(53)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-08-28 15:55:24,477 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(53)-127.0.0.1] HikariPool-1 - Shutdown completed.
