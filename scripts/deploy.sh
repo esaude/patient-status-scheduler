@@ -6,6 +6,6 @@
  sudo chmod -R 777 /opt/PatientStatusScheduler
  sudo chown -R bahmni:bahmni /opt/PatientStatusScheduler
  sudo cp PatientStateSchedular /etc/init.d
- sudo chmod 777 PatientStateSchedular
+ sudo chmod 777 /etc/init.d/PatientStateSchedular
 
- sudo service PatientStateSchedular restart
+ sudo  /etc/init.d/PatientStateSchedular start
