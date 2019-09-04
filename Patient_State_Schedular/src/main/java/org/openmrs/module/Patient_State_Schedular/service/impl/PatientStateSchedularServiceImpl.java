@@ -27,8 +27,8 @@ public class PatientStateSchedularServiceImpl implements PatientStateSchedularSe
 					"   patient_status_state (patient_id, patient_state, patient_status, creator, date_created, uuid) \n" + 
 					"   SELECT\n" + 
 					"      patient_id, " + 
-					"      'ABANDONED',\n" + 
-					"      'TARV',\n" + 
+					"      'ACTIVE',\n" + 
+					"      'TARV_ABANDONED',\n" + 
 					"      0,\n" + 
 					"      NOW(),\n" + 
 					"      UUID() \n" + 
