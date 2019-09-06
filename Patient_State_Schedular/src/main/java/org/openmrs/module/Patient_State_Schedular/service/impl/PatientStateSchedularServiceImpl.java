@@ -50,8 +50,8 @@ public class PatientStateSchedularServiceImpl implements PatientStateSchedularSe
 					"                  from\n" + 
 					"                     patient_status_state pss1 \n" + 
 					"                  where\n" + 
-					"                     patient_state = 'ABANDONED' \n" + 
-					"                     and patient_status = 'TARV' \n" + 
+					"                     patient_state = 'ACTIVE' \n" + 
+					"                     and patient_status = 'TARV_ABANDONED' \n" + 
 					"               )\n" + 
 					"            GROUP BY\n" + 
 					"               patient_id\n" + 
@@ -61,8 +61,8 @@ public class PatientStateSchedularServiceImpl implements PatientStateSchedularSe
 					"      UNION\n" + 
 					"      SELECT\n" + 
 					"         patient_id,\n" + 
-					"         'ABANDONED',\n" + 
-					"         'TARV',\n" + 
+					"         'ACTIVE',\n" + 
+					"         'TARV_ABANDONED',\n" + 
 					"         0,\n" + 
 					"         NOW(),\n" + 
 					"         UUID() \n" + 
@@ -86,8 +86,8 @@ public class PatientStateSchedularServiceImpl implements PatientStateSchedularSe
 					"                     from\n" + 
 					"                        patient_status_state pss1 \n" + 
 					"                     where\n" + 
-					"                        patient_state = 'ABANDONED' \n" + 
-					"                        and patient_status = 'TARV'\n" + 
+					"                        patient_state = 'ACTIVE' \n" + 
+					"                        and patient_status = 'TARV_ABANDONED'\n" + 
 					"                  )\n" + 
 					"               GROUP BY\n" + 
 					"                  patient_id\n" + 
